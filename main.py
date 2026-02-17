@@ -77,8 +77,7 @@ class Predator:
 	def eat(self, world):
 		newPrey = []
 		for p in world.prey:
-			if not (p.x >= self.x - 1 and p.x <= self.x + 1 and p.y >= self.y - 1 and p.y <= self.y + 1): newPrey.append(p)
-			else: print('I ate something')
+			if not (p.x == self.x and p.y == self.y): newPrey.append(p)
 		world.prey = newPrey
 
 if __name__ == '__main__':
